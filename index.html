@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Kumawat</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #00646d;
+        }
+        
+        .containor {
+            width: 360px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .containor::before {
+            content: '';
+            position: absolute;
+            background-image: url('bg.png');
+            background-position: center;
+            background-size: contain;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+        
+        .logo,
+        #name {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #logo {
+            pointer-events: none;
+            border-radius: 100%;
+        }
+        
+        .icon {
+            border-radius: 100%;
+            position: absolute;
+            left: 5px;
+            box-shadow: 0 0 5px 5px #ccc;
+        }
+        
+        #name {
+            font-size: 30px;
+            padding: 5px 8px;
+            color: #fff;
+            background-color: #00646d;
+            text-shadow: 2px 2px 2px;
+        }
+        
+        .row {
+            background-color: #fff;
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            padding: 5px;
+            border-radius: 200px;
+            border: 1px dashed #000;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            margin: 25px auto;
+            font-size: 20px;
+            height: 50px;
+            color: #ea3123;
+        }
+        
+        .bottom {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        
+        .bottom img {
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px 0px #ccc
+        }
+        
+        .logo {
+            position: relative;
+        }
+        
+        .loader {
+            border: 1px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 1px solid blue;
+            border-right: 1px solid green;
+            border-bottom: 1px solid red;
+            border-left: 1px solid pink;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .gradient-border {
+            --borderWidth: 3px;
+            position: relative;
+            border-radius: var(--borderWidth);
+        }
+        
+        .gradient-border:after {
+            content: '';
+            position: absolute;
+            top: calc(-1 * var(--borderWidth));
+            left: calc(-1 * var(--borderWidth));
+            height: calc(100% + var(--borderWidth) * 2);
+            width: calc(100% + var(--borderWidth) * 2);
+            background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+            border-radius: calc(2 * var(--borderWidth));
+            z-index: -1;
+            animation: animatedgradient 3s ease alternate infinite;
+            background-size: 300% 300%;
+        }
+        
+        @keyframes animatedgradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="containor">
+
+        <div class="logo">
+            <img id="logo" src="ankit.jpg" alt="" width="100">
+            <div class="loader"></div>
+        </div>
+
+        <div id="name">Ankit Kumawat</div>
+
+        <div class="links">
+            <a class="row" href="https://t.me/iam_avikumawat">
+                <img class="icon" src="tele.png" alt="" width="40">
+                <span>Telegram</span>
+            </a>
+
+            <a class="row" href="https://www.snapchat.com/add/kumawat5366?share_id=ocr9Dq4pEhs&locale=en-GB">
+                <img class="icon" src="snap.png" alt="" width="40">
+                <span>Snapchat</span>
+            </a>
+
+            <a class="row" href="https://instagram.com/iam_avikumawat">
+                <img class="icon" src="insta.png" alt="" width="40"> <span>Instagram</span>
+            </a>
+        </div>
+
+        <div class="bottom">
+            <a href="https://t.me/iam_avikumawat">
+                <img class="" src="tele.png" alt="" width="35">
+            </a>
+            <a href="">
+                <img class="https://www.snapchat.com/add/kumawat5366?share_id=ocr9Dq4pEhs&locale=en-GB" src="snap.png" alt="" width="35">
+            </a>
+            <a href="https://instagram.com/iam_avikumawat">
+                <img class="" src="insta.png" alt="" width="35">
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

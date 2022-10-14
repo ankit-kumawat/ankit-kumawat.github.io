@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANKIT</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
         * {
             box-sizing: border-box;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -20,19 +23,22 @@
             font-family: 'Raleway', sans-serif;
             font-weight: bold;
         }
-        
+
         div.main {
             width: 360px;
             padding: 15px;
         }
-        
+
+        .link a {
+            margin: 15% auto;
+        }
+
         a {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 25px 30px;
-            margin: 10px auto;
             color: #03e9f4;
             text-decoration: none;
             text-transform: uppercase;
@@ -41,36 +47,36 @@
             letter-spacing: 4px;
             overflow: hidden;
         }
-        
+
         a:hover {
             background: #03e9f4;
-            border-radius: 999999px;
+            border-radius: 500px;
             color: #050801;
             box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
         }
-        
+
+
         a.snap {
             filter: hue-rotate(210deg);
         }
-        
+
         a.snap .icon {
             filter: hue-rotate(-210deg);
         }
-        
+
         a.insta {
             filter: hue-rotate(110deg);
         }
-        
+
         a.insta .icon {
             filter: hue-rotate(-110deg);
         }
-        
+
         a span {
             position: absolute;
             display: block;
         }
-        
+
         a span:nth-child(1) {
             top: 0;
             left: 0;
@@ -79,17 +85,18 @@
             background: linear-gradient(90deg, transparent, #03e9f4);
             animation: animate1 1s linear infinite;
         }
-        
+
         @keyframes animate1 {
             0% {
                 left: -100%;
             }
+
             50%,
             100% {
                 left: 100%;
             }
         }
-        
+
         a span:nth-child(2) {
             top: -100%;
             right: 0;
@@ -99,17 +106,18 @@
             animation: animate2 1s linear infinite;
             animation-delay: 0.25s;
         }
-        
+
         @keyframes animate2 {
             0% {
                 top: -100%;
             }
+
             50%,
             100% {
                 top: 100%;
             }
         }
-        
+
         a span:nth-child(3) {
             bottom: 0;
             right: 0;
@@ -119,17 +127,18 @@
             animation: animate3 1s linear infinite;
             animation-delay: 0.50s;
         }
-        
+
         @keyframes animate3 {
             0% {
                 right: -100%;
             }
+
             50%,
             100% {
                 right: 100%;
             }
         }
-        
+
         a span:nth-child(4) {
             bottom: -100%;
             left: 0;
@@ -139,35 +148,45 @@
             animation: animate4 1s linear infinite;
             animation-delay: 0.75s;
         }
-        
+
         @keyframes animate4 {
             0% {
                 bottom: -100%;
             }
+
             50%,
             100% {
                 bottom: 100%;
             }
         }
-        
+
         h1 {
             color: #fff;
             text-decoration: underline;
         }
-        
+
         .logo {
             position: relative;
             display: flex;
             justify-content: center;
             margin-top: 15px;
         }
-        
+
         #logo {
             pointer-events: none;
-            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+            box-shadow: 0 0 5px #03e9f4, 0 0 50px #03e9f4;
             border-radius: 100%;
+            animation: slide 3s linear infinite;
         }
-        
+
+        @keyframes slide {
+
+            40%,
+            70% {
+                box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+            }
+        }
+
         #name {
             display: flex;
             justify-content: center;
@@ -180,7 +199,7 @@
             color: #03e9f4;
             letter-spacing: 4px;
         }
-        
+
         .loader {
             border: 1px solid #f3f3f3;
             border-radius: 50%;
@@ -193,18 +212,19 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            animation: spin 2s linear infinite;
+            animation: spin 2s alternate-reverse infinite;
         }
-        
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
         }
-        
+
         .icon {
             border-radius: 100%;
             position: absolute;
@@ -212,15 +232,20 @@
             margin: 10px;
             box-shadow: 0 0 5px 5px #ccc;
         }
-        
+
         .bottom {
             display: flex;
             justify-content: space-around;
             margin-top: 10px;
         }
-        
+
+        .bottom a {
+            padding: 0;
+            overflow: visible;
+        }
+
         .bottom img {
-            border-radius: 100%;
+            border-radius: 50%;
             box-shadow: 0px 0px 10px 0px #ccc
         }
     </style>
@@ -232,16 +257,24 @@
             <img id="logo" src="ankit.jpg" alt="" width="100">
             <div class="loader"></div>
         </div>
-        <div id="name">ANKIT</div>
+        <div id="name" class="font-effect-neon">ANKIT</div>
 
-        <a class="tele" href="https://t.me/iam_avikumawat"><span></span><span></span><span></span><span></span><img class="icon" src="tele.png" alt="" width="40">Telegram</a>
-        <a class="snap" href="https://www.snapchat.com/add/kumawat5366?share_id=ocr9Dq4pEhs&locale=en-GB"><span></span><span></span><span></span><span></span><img class="icon" src="snap.png" alt="" width="40">Snapchat</a>
-        <a class="insta" href="https://instagram.com/iam_avikumawat"><span></span><span></span><span></span><span></span><img class="icon" src="insta.png" alt="" width="40">Instagram</a>
+        <div class="link">
+            <a class="tele" href="https://t.me/iam_avikumawat"><span></span><span></span><span></span><span></span><img
+                    class="icon" src="tele.png" alt="" width="40">Telegram</a>
+            <a class="snap"
+                href="https://www.snapchat.com/add/kumawat5366?share_id=ocr9Dq4pEhs&locale=en-GB"><span></span><span></span><span></span><span></span><img
+                    class="icon" src="snap.png" alt="" width="40">Snapchat</a>
+            <a class="insta"
+                href="https://instagram.com/iam_avikumawat"><span></span><span></span><span></span><span></span><img
+                    class="icon" src="insta.png" alt="" width="40">Instagram</a>
 
+        </div>
 
         <div class="bottom">
             <a href="https://t.me/iam_avikumawat"><img src="tele.png" alt="" width="35"></a>
-            <a href="https://www.snapchat.com/add/kumawat5366?share_id=ocr9Dq4pEhs&locale=en-GB"><img src="snap.png" alt="" width="35"></a>
+            <a href="https://www.snapchat.com/add/kumawat5366?share_id=ocr9Dq4pEhs&locale=en-GB"><img src="snap.png"
+                    alt="" width="35"></a>
             <a href="https://instagram.com/iam_avikumawat"><img src="insta.png" alt="" width="35"></a>
         </div>
 
